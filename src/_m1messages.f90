@@ -46,6 +46,16 @@ module messages
     20x, 'Numero de Reynolds (Re):', i7.1/&
     19x, 'Semilla de iteracion (f): ',es10.3/&
     /)"
+    
+    character(len=*), parameter:: datosEjercicio4 = "(&
+    22x,'Longitud (l): ',f5.1, 6x,' m'/&
+    11x,'Rugosidad Absoluta (ks): ',f9.5, 2x,' m'/&
+    12x,'Caudal de disenio (Qd): ', f7.3, 4x, ' m3/s'/&
+    11x,'Diferencia de nivel (H): ',f7.3, 4x,' m'/&
+    01x,'Suma de Coef. Perdidas (Sigma_km): ',f7.3/&
+    08x,'Viscosidad cinematica (nu): ',es11.3,' m2/s'/&
+    25x,'ERROR (E): ',es11.3,' m'/&
+    23x,'delta_d (E): ',f7.3,' m'/)"
 
 end module messages
 

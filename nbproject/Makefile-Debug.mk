@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/_m1messages.o \
 	${OBJECTDIR}/src/_m2metodosLineales.o \
 	${OBJECTDIR}/src/cTuberiaSimple.o \
+	${OBJECTDIR}/src/dTuberiaSimple.o \
 	${OBJECTDIR}/src/main.o \
 	${OBJECTDIR}/src/pTuberiaSimple.o \
 	${OBJECTDIR}/src/test.o
@@ -78,6 +79,10 @@ ${OBJECTDIR}/src/_m2metodosLineales.o: src/_m2metodosLineales.f90
 ${OBJECTDIR}/src/cTuberiaSimple.o: src/cTuberiaSimple.f90
 	${MKDIR} -p ${OBJECTDIR}/src
 	$(COMPILE.f) -g -o ${OBJECTDIR}/src/cTuberiaSimple.o src/cTuberiaSimple.f90
+
+${OBJECTDIR}/src/dTuberiaSimple.o: src/dTuberiaSimple.f90
+	${MKDIR} -p ${OBJECTDIR}/src
+	$(COMPILE.f) -g -o ${OBJECTDIR}/src/dTuberiaSimple.o src/dTuberiaSimple.f90
 
 ${OBJECTDIR}/src/main.o: src/main.f90
 	${MKDIR} -p ${OBJECTDIR}/src
