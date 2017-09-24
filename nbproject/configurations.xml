@@ -15,6 +15,7 @@
       <itemPath>src/_m1messages.f90</itemPath>
       <itemPath>src/_m2metodosLineales.f90</itemPath>
       <itemPath>src/cTuberiaSimple.f90</itemPath>
+      <itemPath>src/dTuberiaSimple.f90</itemPath>
       <itemPath>src/main.f90</itemPath>
       <itemPath>src/pTuberiaSimple.f90</itemPath>
       <itemPath>src/test.f90</itemPath>
@@ -49,6 +50,8 @@
       <item path="src/_m2metodosLineales.f90" ex="false" tool="2" flavor2="0">
       </item>
       <item path="src/cTuberiaSimple.f90" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/dTuberiaSimple.f90" ex="false" tool="2" flavor2="0">
       </item>
       <item path="src/main.f90" ex="false" tool="2" flavor2="0">
       </item>
@@ -85,6 +88,8 @@
       <item path="src/_m2metodosLineales.f90" ex="false" tool="2" flavor2="0">
       </item>
       <item path="src/cTuberiaSimple.f90" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/dTuberiaSimple.f90" ex="false" tool="2" flavor2="0">
       </item>
       <item path="src/main.f90" ex="false" tool="2" flavor2="0">
       </item>

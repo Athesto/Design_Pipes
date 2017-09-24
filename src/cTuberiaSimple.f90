@@ -51,7 +51,7 @@ subroutine cTuberiaSimple()
         !Paso 4: Inicializar la iteracion
         do i = 1,100
                 
-        !Paso 4: 1ra subrutina Calcular vi
+        !Paso 4: 1ra subrutina Calcular vi ec 2.3
         vi = cal_vi(ks,nu,g,d,hf1)
 
         
