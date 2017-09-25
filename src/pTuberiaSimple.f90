@@ -8,7 +8,7 @@ subroutine pTuberiaSimple()
     real:: H, p, E
     
     !variables internas
-    integer :: i, Re
+    integer :: i, Re, selection
     real:: v,Sigma_hm,ksd, f,hf, Pot,A
     character :: option
     !Parametros
@@ -52,9 +52,27 @@ subroutine pTuberiaSimple()
         print "(a6,a18,a18,a12,a12)","A","v","Sigma_hm","Re","ksd"
         write(*,*)A,v,Sigma_hm,Re,ksd,char(10)
         
+        print *, "1- Newton"
+        print *, "2- Newton-Rapson"
         
-        f= friccion1Pto(ksd,Re,0.001)
-        !friccionNewtonRapsody()
+        do while (.true.)
+            write (*,'(a)',ADVANCE="NO") ">Seleccione una opcion y presione ENTER (1 + ENTER): "
+            read(*,*) selection
+            select case (selection)
+                case (1)
+                    f= friccion1Pto(ksd,Re,0.001)
+                    exit
+                case (2)
+                    f = friccionNewtonRapshon(ksd,Re,0.001)
+                    exit
+                case default 
+                    print *, "caso no contemplado"
+            end select     
+        
+        end do
+        
+        
+        
         
         !Calcular h con 1.36
          hf = f * (l / d) * ((v ** 2) / (2 * g))
