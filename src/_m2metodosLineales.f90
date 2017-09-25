@@ -100,7 +100,7 @@
         use messages
         implicit none 
         real:: f, ksd
-        integer:: Re, i
+        integer:: Re, i, methodSelection
         character :: option !es la opción par cambiar los ejemplos (y/n)
         print mensajeSeleccionFriccion
         
@@ -122,17 +122,34 @@
             print*, char(10)
         end if
         end do
-        print *, "Metodo Newton punto: "
-        f = friccion1Pto(ksd,Re,f)
-        print "(/'f= ', es10.3/)", f
-        print *, "FIN"
-        read(*,*)     
+        do while (.true.)
+            print *, ""
+            print *, "1: Metodo 1 punto  (Newton)"
+            print *, "2: Metodo derivada (Newton Raphson)"
+            write(*,'(a)',ADVANCE="NO") "Seleccione una opcion  (1 o 2)? "
+            read(*,*) methodSelection
+
+            select case (methodSelection)
+                case (1)
+                    print *, "Metodo Newton punto: "
+                    f = friccion1Pto(ksd,Re,f)
+                    print "(/'f= ', es10.3/)", f
+                    print *, "FIN"
+                    read(*,*)   
+                    exit
+
+                case (2)
+                    print *, "Metodo NewtonPapshon punto: "
+                    f= friccionNewtonRapshon(ksd,Re,f)
+                    print "(/'f= ', es10.3/)", f
+                    print *, "FIN"
+                    read(*,*)
+                    exit
+                case default
+                    print *, "opcion invalida"
+            end select
+        end do
         
-        print *, "Metodo NewtonPapshon punto: "
-        f= friccionNewtonRapshon(ksd,Re,f)
-        print "(/'f= ', es10.3/)", f
-        print *, "FIN"
-        read(*,*)
         
 
     end subroutine EjemploFriccion
