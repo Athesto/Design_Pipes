@@ -62,11 +62,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/desing_pipes.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/design_pipes.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/desing_pipes.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/design_pipes.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.f} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/desing_pipes ${OBJECTFILES} ${LDLIBSOPTIONS} -static C:\MinGW\bin\libgfortran-3.dll C:\MinGW\bin\libgcc_s_dw2-1.dll
+	${LINK.f} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/design_pipes ${OBJECTFILES} ${LDLIBSOPTIONS} -static C:\MinGW\bin\libgfortran-3.dll C:\MinGW\bin\libgcc_s_dw2-1.dll
 
 ${OBJECTDIR}/src/_m1messages.o: src/_m1messages.f90
 	${MKDIR} -p ${OBJECTDIR}/src

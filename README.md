@@ -13,8 +13,9 @@
 
 ## Para compilar
 
- 1. Descargas el repositorio
- 2. Descomprime la capeta `Desing_Pipes-master`
+ 1. Ves a la seccion de [Release]
+ 2. Descarga el codigo de fuente `Source code (zip)`
+ 2. Descomprime la capeta `Design_Pipes-X.X.zip`
  3. En el Netbeans, `Files/Open Project`
  4. Abres el proyecto `Desing_Pipes-master`
  8. `Shift`+`F11` (Clean and Build Project)

@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=MinGW-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW-Windows
-CND_ARTIFACT_NAME_Debug=desing_pipes
-CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/desing_pipes
+CND_ARTIFACT_NAME_Debug=design_pipes
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/design_pipes
 CND_PACKAGE_DIR_Debug=dist/Debug/MinGW-Windows/package
-CND_PACKAGE_NAME_Debug=desingpipes.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/desingpipes.tar
+CND_PACKAGE_NAME_Debug=designpipes.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/designpipes.tar
 # Release configuration
 CND_PLATFORM_Release=MinGW-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/MinGW-Windows
-CND_ARTIFACT_NAME_Release=desing_pipes
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/desing_pipes
+CND_ARTIFACT_NAME_Release=design_pipes
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/design_pipes
 CND_PACKAGE_DIR_Release=dist/Release/MinGW-Windows/package
-CND_PACKAGE_NAME_Release=desingpipes.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/desingpipes.tar
+CND_PACKAGE_NAME_Release=designpipes.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/designpipes.tar
 #
 # include compiler specific variables
 #
