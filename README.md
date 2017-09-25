@@ -2,7 +2,7 @@
 > Algoritmos en FORTRAN para el diseño de tuberías propuestos por *Juan G. Saldarraiga* en el libro de *Hidráulica de Tuberías*
 
 ## Descarga
- En [Release] se encuentra `design_pipes.zip`  que contiene el último archivo `exe` compilado, diviértanse
+ En [Releases] se encuentra `design_pipes.zip`  que contiene el último archivo `exe` compilado, diviértanse
  
 ## Instrucciones de Compilación
 Si lo que quieres es descargar y compilar codigo fuente, revisa primero los prerrequisitos
@@ -36,7 +36,7 @@ Si se quiere correr el ejecutable en un computador que no tenga instalado el Min
 ## Sugerencias
 Este repositorio nace del deseo de abandonar la arcaica idea de realizar proyectos y que se pierdan justo cuando se acaba una materia. por lo que pido que compartan, aprendan y comenten si no les funciona o si tienen algún problema en compilar [aquí](https://github.com/Athesto/Desing_Pipes/issues)
 
-[Release]: https://github.com/Athesto/Desing_Pipes/releases
+[Releases]: https://github.com/Athesto/Desing_Pipes/releases
 [Netbeans]: https://netbeans.org/community/releases/82/install.html#requiredsoftware
 [licence]: http://google.com
 [Java JRE]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
