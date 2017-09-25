@@ -34,3 +34,6 @@
 # Folders
 /dist
 /build
+
+# Privates
+private.xml
