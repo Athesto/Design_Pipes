@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Desing_Pipes
+PROJECTNAME=Design_Pipes
 
 # Active Configuration
 DEFAULTCONF=Debug

@@ -7,7 +7,6 @@ module messages
     '| 2: Calculo de potencia de tuberia simple'/&
     '| 3: Calculo del factor de friccion f, por el metodo de iteracion de un punto'/&
     '| 4: Disenio de tuberia simple'/&
-    '| 5: Disenio de tuberia simple con bombeo'/&
     '| '/&
     '| 0: Terminar'/&
     '<-------------------------------------------------------------------------------->')"

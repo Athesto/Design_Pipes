@@ -10,10 +10,13 @@ program HIDRAULICA
     use metodosLineales
     
     implicit none
+    character(len= 3):: version = "0.2" 
     real :: x
     !real, external :: test
     
     integer :: selection
+    
+    print "(32x,'v',a3)", version
     do while (.true.)
        
         print mensajeOpciones

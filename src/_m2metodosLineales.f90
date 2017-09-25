@@ -64,7 +64,7 @@
 
         if (Re > 2200) then
             fi = semilla_f
-            print"(a10,a15,a18,a18)", "fi","x","g(x)","fi_1"
+            print"(a10,a15,a18,a18,a18)", "fi","x","x+1","F(x)","dF(x)"
             
             xi = 1/sqrt(fi)
 
@@ -77,7 +77,7 @@
                 
                 xi_1 = xi - (Fx - xi)/(dFx - 1)
                 
-                !print *, fi, 1/sqrt(fi),1/sqrt(fi_1),fi_1
+                print *, fi, xi,xi_1,Fx,dFx
                 if (abs(xi - xi_1)<E) then
                     exit
                 else
@@ -100,36 +100,41 @@
         use messages
         implicit none 
         real:: f, ksd
-        integer:: Re, selection
+        integer:: Re, i
+        character :: option !es la opción par cambiar los ejemplos (y/n)
         print mensajeSeleccionFriccion
         
         ksd=0.0001; Re=20000; f=0.001;
-        print datosEjercicio3, ksd, Re, f
         
-        
-        
-        do while (.true.)
-            write (*,'(a)',ADVANCE="NO") ">Seleccione una opcion y presione ENTER (1 + ENTER): "
-            read(*,*) selection
+        print"('Por defecto, se cargaran datos del ejemplo 2.1'/)"
+        do i = 1,10
             
-            
-            select case (selection)
-                case(0)
-                    return
-                case(1)
-                    f = friccion1Pto(ksd,Re,f)
-                    exit
-                case(2)
-                    f= friccionNewtonRapshon(ksd,Re,f)
-                    exit
-                case default
-                    print *,"Invalid option"
-            end select
+        print datosEjercicio3, ksd, Re, f  
+        
+        write(*,'(a)',ADVANCE="NO") "Desea continuar con estos datos (y/n)? "
+        read(*,*) option
+        if (option == 'y')then            
+            exit
+        else
+            write(*,*) char(10),"introduzca los valores(3) como un vector con el sgte formato: "
+            print*,"ksd, Re, f"
+            read(*,*)ksd, Re, f  !DEBUG
+            print*, char(10)
+        end if
         end do
+        print *, "Metodo Newton punto: "
+        f = friccion1Pto(ksd,Re,f)
+        print "(/'f= ', es10.3/)", f
+        print *, "FIN"
+        read(*,*)     
         
+        print *, "Metodo NewtonPapshon punto: "
+        f= friccionNewtonRapshon(ksd,Re,f)
         print "(/'f= ', es10.3/)", f
         print *, "FIN"
         read(*,*)
+        
+
     end subroutine EjemploFriccion
     
     end module
