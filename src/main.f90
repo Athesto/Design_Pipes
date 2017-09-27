@@ -10,7 +10,7 @@ program HIDRAULICA
     use metodosLineales
     
     implicit none
-    character(len= 3):: version = "0.4" 
+    character(len= 3):: version = "0.5" 
     real :: x
     !real, external :: test
     

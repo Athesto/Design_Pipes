@@ -2,7 +2,7 @@
 > Algoritmos en FORTRAN para el diseño de tuberías propuestos por *Juan G. Saldarraiga* en el libro de *Hidráulica de Tuberías*
 
 ## Descarga
- En [Releases] se encuentra `design_pipes.zip`  que contiene el último archivo `exe` compilado, diviértanse
+ En [Releases] se encuentra `design_pipes-x.x-app.zip` que contiene el último archivo `exe` compilado, diviértanse
  
 ## Instrucciones de Compilación
 Si lo que quieres es descargar y compilar codigo fuente, revisa primero los prerrequisitos

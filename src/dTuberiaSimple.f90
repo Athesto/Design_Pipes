@@ -2,14 +2,15 @@ subroutine dTuberiaSimple
     use messages
      implicit none
      !!Variables Externas
-     real:: Qd, ks, d_delta, H, z2, l, nu,sigma_km
+     real:: Qd, ks, d_delta, H, z2, l, nu,sigma_km,E
 
      !!Variables Internas
      real:: di, hfi, vi, Qi, Hfi_1,sigma_hm
      real, parameter, dimension(1:6)::d_comercial=(/3,4,6,8,10,12/) !Tomados del ejemplo 2.5
      integer::i,j=1,k=0
+     character :: option !es la opción par cambiar los ejemplos (y/n)
 
-     real, parameter :: pi = 4 * atan (1.0), g = 9.81, p_agua = 999.1, E = 1.0E-5
+     real, parameter :: pi = 4 * atan (1.0), g = 9.81, p_agua = 999.1
 
 
 
@@ -18,10 +19,30 @@ subroutine dTuberiaSimple
 
 
      !Leer las variables
-     l=150; ks=0.00015;Qd=0.12; H=2.2;Sigma_km=0.5+0.8+10*0.1+1; nu = 1.17E-6; d_delta=0.0254; z2=0
-     print datosEjercicio4, l,ks,Qd,H,Sigma_km,nu,E,d_delta
-     print "('Diametros comerciales(inch): ',6f10.0)",d_comercial(:)
-     print "('Diametros comerciales( mts): ',6f10.4)",d_comercial(:)*0.0254
+     l=150; ks=0.00015;Qd=0.12; H=2.2;Sigma_km=0.5+0.8+10*0.1+1; nu = 1.17E-6; E = 1.0E-5; d_delta=0.0254; z2=0
+     print"('Por defecto, se cargaran datos del ejemplo 2.3'/)"
+     do i = 1,10
+            
+        print datosEjercicio4, l,ks,Qd,H,Sigma_km,nu,E,d_delta
+        print "('Diametros comerciales(inch): ',6f10.0)",d_comercial(:)
+        print "('Diametros comerciales( mts): ',6f10.4)",d_comercial(:)*0.0254
+        
+        write(*,'(a)',ADVANCE="NO") "Desea continuar con estos datos (y/n)? "
+        read(*,*) option
+        if (option == 'y')then            
+            exit
+        else
+            write(*,*) char(10),"introduzca los valores(9) como un vector con el sgte formato: "
+            print*,"l, ks, Qd, H, Sigma_km, nu, E, d_delta"
+            read(*,*)l, ks, Qd, H, Sigma_km, nu, E, d_delta  !DEBUG
+            print*, char(10)
+        end if
+        end do
+        
+     
+     
+     
+     
 
      !Suponer hs = H-z2
      hfi= H-z2
